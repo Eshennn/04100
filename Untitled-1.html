@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 Vue 練習作品集</title>
+    <!-- 引入圓潤字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', "Microsoft JhengHei", "微軟正黑體", sans-serif;
+            background-color: #fdf6ff; /* 淺紫色背景 */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: #555;
+        }
+
+        h1 {
+            color: #ff85a1;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px #ffe3e9;
+            margin-bottom: 10px;
+        }
+
+        .student-info {
+            background-color: #ffe3e9;
+            color: #ff85a1;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(255, 133, 161, 0.2);
+        }
+
+        .description {
+            color: #8a8a8a;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* 選單網格 */
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 40px;
+        }
+
+        li {
+            background: white;
+            border-radius: 20px;
+            border: 3px solid #ffecf0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+        }
+
+        li:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #ff85a1;
+            box-shadow: 0 10px 20px rgba(255, 133, 161, 0.2);
+        }
+
+        li:active {
+            transform: scale(0.95);
+        }
+
+        a {
+            text-decoration: none;
+            color: #6a5acd;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+        }
+
+        a span {
+            font-size: 0.85rem;
+            color: #b0b0b0;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        /* Iframe 預覽區域 */
+        .preview-container {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 30px;
+            border: 8px solid #ffe3e9;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 模擬瀏覽器頂部 */
+        .preview-header {
+            background: #ffe3e9;
+            padding: 10px 20px;
+            display: flex;
+            gap: 8px;
+        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; background: #ffb1c1; }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            display: block;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌸 練習作品集 🌸</h1>
+    <div class="student-info">學號：413730531</div>
+    <p class="description">點擊下方的練習卡片，成果會直接顯示在下方預覽喔！✨</p>
+
+    <ul>
+        <li><a href="ex1/index.html" target="preview">🍭 練習 01<span>基礎計數器</span></a></li>
+        <li><a href="ex2/index.html" target="preview">🎨 練習 02<span>資料綁定</span></a></li>
+        <li><a href="ex3/index.html" target="preview">⚡ 練習 03<span>事件處理</span></a></li>
+        <li><a href="ex4/index.html" target="preview">📝 練習 04<span>雙向綁定</span></a></li>
+        <li><a href="ex5/index.html" target="preview">👁️ 練習 05<span>條件渲染</span></a></li>
+        <li><a href="ex6/index.html" target="preview">🍎 練習 06<span>列表渲染</span></a></li>
+        <li><a href="ex7/index.html" target="preview">💰 練習 07<span>計算屬性</span></a></li>
+        <li><a href="ex8/index.html" target="preview">🌈 練習 08<span>樣式切換</span></a></li>
+        <li><a href="ex9/index.html" target="preview">✅ 練習 09<span>待辦清單</span></a></li>
+    </ul>
+
+    <div class="preview-container">
+        <div class="preview-header">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <iframe name="preview" src="ex1/index.html"></iframe>
+    </div>
+
+</body>
+</html>
